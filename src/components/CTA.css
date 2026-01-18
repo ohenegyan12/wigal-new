@@ -1,0 +1,119 @@
+.cta-section {
+    padding: 80px 24px 100px;
+    /* Top padding might be less if it follows ASAP close */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.cta-container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #1E3A8A;
+    /* Deep Blue - adjusted to match image visual. #1e3a8a is tailwind blue-900 roughly */
+    /* Using the exact gradient or solid color from the image. It looks like a deep rich blue. */
+    background: #1C3D85;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-content {
+    flex: 1;
+    max-width: 500px;
+    z-index: 2;
+    padding-right: 40px;
+}
+
+.cta-title {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: white;
+    margin-bottom: 24px;
+}
+
+.cta-description {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 32px;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    color: #1C3D85;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-family: 'Neo Sans Std', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn-icon {
+    width: 20px;
+    height: 20px;
+    /* Transform to match blue color */
+    filter: invert(19%) sepia(58%) saturate(2978%) hue-rotate(215deg) brightness(94%) contrast(93%);
+}
+
+.cta-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+}
+
+.cta-image {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 16px;
+    object-fit: cover;
+    /* Based on image, it might be a square or slightly landscape aspect ratio */
+    aspect-ratio: 1/1;
+}
+
+@media (max-width: 1024px) {
+    .cta-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .cta-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cta-image-wrapper {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cta-image {
+        max-width: 100%;
+    }
+
+    .cta-title {
+        font-size: 2.25rem;
+    }
+}

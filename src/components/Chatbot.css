@@ -1,0 +1,332 @@
+.chatbot-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    font-family: 'Inter', 'Proxima Nova', sans-serif;
+}
+
+.chatbot-toggle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #21438D;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.chatbot-toggle:hover {
+    transform: scale(1.05);
+}
+
+.chatbot-liquid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    /* Removed liquid animation for cleaner look matching reference icon if needed, but keeping simple blue circle is safer if no specific animation requested. Let's keep it simple blue. */
+    background-color: #21438D;
+    z-index: 1;
+}
+
+/* If user wanted the liquid effect, we can keep it, but the reference image trigger is just a logo. I'll stick to the existing blue circle for now as the user focused on the modal content. */
+
+.chatbot-icon {
+    position: relative;
+    z-index: 2;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chatbot-window {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 380px;
+    height: 600px;
+    /* Taller as per reference */
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform-origin: bottom right;
+    border: 1px solid #f0f0f0;
+}
+
+/* Add animation class to match JS */
+.chatbot-window {
+    animation: openChat 0.2s ease-out;
+}
+
+@keyframes openChat {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.chat-header {
+    background-color: white;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.chat-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo-container {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    /* Fallback if transparent */
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+.brand-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand-name {
+    font-weight: 700;
+    color: #111;
+    font-size: 1.05rem;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #999;
+    /* Grey X */
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 4px;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    /* Space between message groups */
+}
+
+.message-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 85%;
+}
+
+.message-wrapper.bot {
+    align-self: flex-start;
+}
+
+.message-wrapper.user {
+    align-self: flex-end;
+}
+
+.message {
+    padding: 16px 20px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #111;
+}
+
+.message.bot {
+    background-color: #F3F4F6;
+    /* Light grey */
+    border-bottom-left-radius: 4px;
+}
+
+.message.user {
+    background-color: #21438D;
+    /* Brand Blue */
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.bot-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 4px;
+}
+
+.bot-avatar-small {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.bot-name {
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.chat-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* Align right */
+    gap: 12px;
+    margin-top: auto;
+    /* Push to bottom of empty space if needed */
+}
+
+.action-pill {
+    background-color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 20px;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    text-align: right;
+}
+
+.action-pill:hover {
+    border-color: #21438D;
+    color: #21438D;
+    background-color: #F8FAFC;
+}
+
+.chat-footer {
+    padding: 16px 20px;
+    background-color: white;
+}
+
+.chat-input-area {
+    background-color: #F3F4F6;
+    border-radius: 24px;
+    padding: 6px 6px 6px 16px;
+    /* Space for button on right */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.chat-input-area:focus-within {
+    border-color: #d1d5db;
+    background-color: white;
+    box-shadow: 0 0 0 2px rgba(33, 67, 141, 0.1);
+}
+
+.chat-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    font-size: 0.95rem;
+    outline: none;
+    color: #111;
+    padding: 8px 0;
+}
+
+.chat-input::placeholder {
+    color: #9CA3AF;
+}
+
+.send-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: transparent;
+    color: #6B7280;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.send-btn:hover:not(:disabled) {
+    background-color: #e5e7eb;
+    color: #111;
+}
+
+.send-btn:disabled {
+    color: #D1D5DB;
+    cursor: default;
+}
+
+.send-icon-rotate {
+    transform: rotate(180deg);
+    /* Make ChevronDown point Up */
+}
+
+.chat-disclaimer {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #9CA3AF;
+    line-height: 1.3;
+}
+
+@media (max-width: 640px) {
+    .chatbot-container {
+        right: 16px;
+        bottom: 16px;
+    }
+
+    .chatbot-window {
+        width: calc(100vw - 32px);
+        height: 65vh;
+        max-height: 600px;
+        bottom: 70px;
+        right: 0;
+    }
+
+    .chatbot-toggle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .chatbot-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+}

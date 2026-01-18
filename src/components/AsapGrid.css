@@ -1,0 +1,172 @@
+.asap-section {
+    padding: 100px 24px;
+    background-color: white;
+    text-align: center;
+}
+
+.asap-header {
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.asap-tag {
+    background: #3B82F6;
+    /* Bright Blue */
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-family: 'Neo Sans Std', sans-serif;
+}
+
+.asap-title {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1A202C;
+    margin-bottom: 15px;
+}
+
+.asap-subtitle {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 1.1rem;
+    color: #4A5568;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.asap-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.asap-card {
+    border-radius: 24px;
+    padding: 60px 50px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    min-height: 480px;
+    transition: transform 0.3s ease;
+}
+
+.asap-card:hover {
+    transform: translateY(-5px);
+}
+
+.asap-card-title {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.asap-card-desc {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 450px;
+}
+
+/* Specific Card Styles */
+.asap-card-blue {
+    background-color: #3B5AFB;
+    /* Vibrant Blue */
+}
+
+.asap-card-dark {
+    background-color: #1A1A1A;
+    /* Dark / Black */
+}
+
+/* Buttons */
+.asap-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Neo Sans Std', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    width: fit-content;
+    margin-top: 0;
+    /* Push to bottom if needed, though design has it below text */
+}
+
+.btn-white-blue {
+    background: white;
+    color: #3B5AFB;
+}
+
+.asap-btn:hover {
+    opacity: 0.9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.asap-btn-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.btn-white-blue .asap-btn-icon {
+    /* Filter to convert black SVG to Blue #3B5AFB */
+    filter: invert(30%) sepia(99%) saturate(1833%) hue-rotate(227deg) brightness(101%) contrast(98%);
+}
+
+@media (max-width: 1024px) {
+    .asap-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .asap-card {
+        min-height: auto;
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    .asap-title {
+        font-size: 2rem;
+    }
+
+    .asap-bulk-illustration,
+    .asap-access-illustration {
+        display: none;
+    }
+}
+
+.asap-bulk-illustration {
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    height: auto;
+    object-fit: contain;
+}
+
+.asap-access-illustration {
+    position: absolute;
+    bottom: -120px;
+    right: 0;
+    width: 55%;
+    height: auto;
+    object-fit: contain;
+}

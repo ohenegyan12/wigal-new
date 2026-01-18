@@ -1,0 +1,286 @@
+.bento-section {
+    padding: 100px 24px;
+    background-color: #F8F9FB;
+    text-align: center;
+}
+
+.bento-header {
+    margin-bottom: 60px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bento-tag {
+    background: #2D9E64;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-family: 'Neo Sans Std', sans-serif;
+}
+
+.bento-title {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1A202C;
+    margin-bottom: 15px;
+}
+
+.bento-subtitle {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 1.1rem;
+    color: #4A5568;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.bento-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(450px, auto);
+    gap: 16px;
+}
+
+.bento-card {
+    border-radius: 24px;
+    padding: 40px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.bento-card:hover {
+    transform: translateY(-5px);
+}
+
+.bento-card-title {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.bento-card-desc {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: 320px;
+    margin-bottom: 25px;
+}
+
+/* Specific Card Styles */
+.card-large {
+    grid-column: span 2;
+    background-color: #218350;
+    color: white;
+}
+
+.card-large .bento-card-desc {
+    max-width: 600px;
+}
+
+.card-lime {
+    grid-column: span 1;
+    background-color: #E6FFB3;
+    color: #1A202C;
+}
+
+.card-pale {
+    grid-column: span 1;
+    background-color: #C0EAD1;
+    color: #1A202C;
+}
+
+.card-blue {
+    grid-column: span 2;
+    background-color: #B2CDDE;
+    color: #1A202C;
+}
+
+.card-blue .bento-card-desc {
+    max-width: 600px;
+}
+
+.card-white {
+    grid-column: span 2;
+    background-color: white;
+    color: #1A202C;
+}
+
+.card-white .bento-card-desc {
+    max-width: 600px;
+}
+
+/* Buttons */
+.bento-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: 'Neo Sans Std', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    width: fit-content;
+}
+
+.btn-white {
+    background: white;
+    color: #218350;
+}
+
+.btn-green {
+    background: #218350;
+    color: white;
+}
+
+.bento-btn:hover {
+    opacity: 0.9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.button-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.btn-white .button-icon {
+    /* Filter to convert black/dark SVG to #218350 green */
+    filter: invert(36%) sepia(80%) saturate(452%) hue-rotate(97deg) brightness(92%) contrast(89%);
+}
+
+.bento-mockup-large {
+    width: 80%;
+    height: auto;
+    margin-top: auto;
+    border-radius: 12px;
+    align-self: center;
+    box-shadow: none;
+    /* Ensure it doesn't overflow weirdly */
+    max-width: 100%;
+    transform: translate(20px, 20px);
+}
+
+.bento-person-image {
+    position: absolute;
+    bottom: 0;
+    right: -30px;
+    width: 75%;
+    /* Start smaller, adjust based on image */
+    height: auto;
+    object-fit: contain;
+    /* Optional transform if needed to push it out/in */
+}
+
+.bento-api-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 65%;
+    /* Start smaller, adjust based on image */
+    height: auto;
+    object-fit: contain;
+    transform: none;
+    /* Initial position, tweak as needed */
+}
+
+.bento-voice-image {
+    position: absolute;
+    bottom: -20px;
+    /* Negative bottom to have it peek out bottom if needed, or positive to float */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    /* Start smaller, adjust based on image */
+    height: auto;
+    object-fit: contain;
+}
+
+.bento-sms-image {
+    position: absolute;
+    bottom: -130px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65%;
+    /* Start smaller, adjust based on image */
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+    .bento-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card-large {
+        grid-row: auto;
+        grid-column: span 2;
+    }
+
+    .card-blue {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 640px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        /* Let content dictate height on mobile */
+    }
+
+    .card-large,
+    .card-blue,
+    .card-white,
+    .card-lime,
+    .card-pale {
+        grid-column: span 1;
+        /* Reset all col spans */
+        min-height: auto;
+        /* Allow auto height */
+    }
+
+    .bento-title {
+        font-size: 2rem;
+    }
+
+    /* Hide the image in the last card (Jump In & Start Sending) on mobile */
+    .card-white .bento-person-image,
+    .card-blue .bento-api-image {
+        display: none;
+    }
+
+    /* Increase height for the 2nd and 3rd cards to show their images */
+    .card-lime,
+    .card-pale {
+        min-height: 450px;
+        /* Ensure space for the images */
+    }
+
+    .bento-card {
+        padding: 30px 24px;
+        /* Slightly less padding on mobile */
+    }
+
+    /* Adjust image positions for mobile to sit lower */
+    .bento-sms-image {
+        bottom: -220px;
+    }
+
+    .bento-voice-image {
+        bottom: -50px;
+    }
+}

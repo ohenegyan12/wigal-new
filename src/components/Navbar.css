@@ -1,0 +1,319 @@
+.navbar {
+    width: 100%;
+    padding: 1.5rem 0;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar.scrolled {
+    position: fixed;
+    background: white;
+    padding: 0.8rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo .logo-img {
+    height: 48px;
+    display: block;
+    transition: height 0.3s ease;
+}
+
+.navbar.scrolled .logo-img {
+    height: 40px;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item-dropdown {
+    position: relative;
+}
+
+.nav-link {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.nav-link.scrolled {
+    color: #21438D;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+.chevron {
+    transition: transform 0.3s ease;
+}
+
+.chevron.open {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    min-width: 200px;
+    border-radius: 12px;
+    padding: 0.8rem 0;
+    list-style: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    margin-top: 0.5rem;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+    background: transparent;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 0.6rem 1.5rem;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+}
+
+.dropdown-menu li a:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: #000;
+}
+
+/* Mobile Menu Styles */
+.mobile-menu-icon {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.burger-icon {
+    width: 24px;
+    height: 20px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.burger-icon span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: white;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.burger-icon span:nth-child(1) {
+    top: 0px;
+}
+
+.burger-icon span:nth-child(2) {
+    top: 9px;
+}
+
+.burger-icon span:nth-child(3) {
+    top: 18px;
+}
+
+/* Scrolled state for burger menu */
+.burger-icon.scrolled span {
+    background: #21438D;
+}
+
+/* Open state for burger menu */
+.burger-icon.open span:nth-child(1) {
+    top: 9px;
+    transform: rotate(135deg);
+}
+
+.burger-icon.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.burger-icon.open span:nth-child(3) {
+    top: 9px;
+    transform: rotate(-135deg);
+}
+
+@media (max-width: 900px) {
+    .navbar-container {
+        padding: 0 16px;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .navbar-logo {
+        display: block;
+        z-index: 1002;
+        /* Ensure logo is above the mobile menu overlay if needed, or stays separate */
+    }
+
+    .navbar-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #21438D;
+        /* Brand blue background */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        padding-top: 100px;
+        /* Space for the header */
+        overflow-y: auto;
+        padding-bottom: 50px;
+    }
+
+    .navbar-links.active {
+        transform: translateX(0);
+    }
+
+    /* When active, we want to show the logo inside the menu perhaps?
+       Or maybe just the links appear.
+       If the logo is part of the navbar-container, we can make it visible when menu is active if we add a class to container.
+       But simplistic interpretation: Navbar logo is hidden. Menu opens -> Links appear.
+    */
+
+    .nav-item-dropdown {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .nav-item-dropdown.active {
+        /* maybe highlight active? */
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-link {
+        width: 100%;
+        font-size: 1.25rem;
+        justify-content: center;
+        padding: 1.25rem 0;
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-link.scrolled {
+        color: white;
+        /* Always white on the blue mobile menu */
+    }
+
+    /* Remove hover opacity on mobile to avoid flicker */
+    .nav-link:hover {
+        opacity: 1;
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .dropdown-menu {
+        position: static;
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: none;
+        box-shadow: none;
+        width: 100%;
+        display: block;
+        /* Always 'block' in DOM if open, React controls visibility */
+        text-align: center;
+        padding: 10px 0;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .dropdown-menu::before {
+        display: none;
+    }
+
+    .dropdown-menu li a {
+        color: rgba(255, 255, 255, 0.9);
+        padding: 12px 0;
+        font-size: 1rem;
+    }
+
+    .dropdown-menu li a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+    }
+
+    .burger-icon.open span {
+        background: white !important;
+        /* Always white active burger on blue bg */
+    }
+
+    /* Show logo when menu is open?
+       The user said "logo and nav links... activate when we hit the burger".
+       So we probably need to show the logo somewhere.
+       I'll use a CSS selector to show the logo if I can target it relative to something,
+       but React state is easier.
+       Let's stick to CSS logic for now.
+       If I want logo to appear, I might need to make sure it's not 'display: none'.
+       Let's refine the "logo hidden" rule.
+    */
+}
+
+/* Refined rule for Logo visibility based on class appended in JSX if I did that.
+   But I didn't add a class to parent for open menu.
+   Use :has selector or modify JSX. 
+   I'll modify JSX next to toggle logo visibility class or just handle it in CSS if I assume "activate" means "appear in the menu".
+*/
