@@ -12,7 +12,7 @@ const products = [
         heroTitle: 'Grow Engagement with Powerful Messaging Tools',
         heroDescription: "Send Bulk SMS, Voice SMS, IVR or Email campaigns easily and reliably with FROG Ghana's leading messaging platform.",
         buttonText: 'Get Started with FROG',
-        video: '/frog-new.mp4',
+        video: 'https://res.cloudinary.com/dg41c7v3d/video/upload/v1768842642/frog-new_jnuwpj.mp4',
         logo: '/frog-logo.svg'
     },
     {
