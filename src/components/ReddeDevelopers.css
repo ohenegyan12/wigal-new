@@ -1,0 +1,126 @@
+.redde-developers-section {
+    padding: 120px 0;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.redde-developers-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.redde-developers-content {
+    flex: 1;
+    padding: 60px 40px;
+    /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%;
+}
+
+.redde-developers-card {
+    background-color: #FFEBEE;
+    border-radius: 40px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    min-height: 300px;
+}
+
+.redde-developers-title {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #03140C;
+    /* Dark text */
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.redde-developers-desc {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 1.1rem;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.redde-developers-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #ffffff;
+    color: #A81F25;
+    /* Redde Red */
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 12px;
+    /* Slight rounding like badge */
+    text-decoration: none;
+    width: fit-content;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.redde-developers-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(168, 31, 37, 0.15);
+    /* Red shadow */
+}
+
+.redde-developers-image-wrapper {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    /* Create the rectangular look with rounded corners */
+    margin: 32px;
+    /* Give it some spacing from the card edge */
+    margin-left: 0;
+    /* But flush with content */
+    border-radius: 20px;
+}
+
+.redde-developers-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+    background-color: #E6B0AA;
+    /* Fallback color */
+}
+
+@media (max-width: 900px) {
+    .redde-developers-section {
+        padding: 80px 0;
+    }
+
+    .redde-developers-card {
+        flex-direction: column;
+    }
+
+    .redde-developers-content {
+        max-width: 100%;
+        padding: 60px 40px;
+    }
+
+    .redde-developers-image-wrapper {
+        height: 400px;
+        margin: 24px 24px 24px;
+        /* Consistent margin on bottom */
+    }
+}
+
+@media (max-width: 600px) {
+    .redde-developers-content {
+        padding: 40px 24px;
+    }
+
+    .redde-developers-title {
+        font-size: 1.75rem;
+    }
+}

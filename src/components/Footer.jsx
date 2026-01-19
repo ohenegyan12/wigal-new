@@ -7,10 +7,14 @@ const Footer = () => {
             <div className="footer-container">
                 {/* Brand Column */}
                 <div className="footer-brand">
-                    <img src="/logo-white.png" alt="Wigal" className="footer-logo" />
-                    <p className="footer-description">
-                        A technology company building secure and scalable software solutions for businesses.
-                    </p>
+                    <div className="brand-info">
+                        <a href="/" style={{ display: 'inline-block' }}>
+                            <img src="/logo-white.png" alt="Wigal" className="footer-logo" />
+                        </a>
+                        <p className="footer-description">
+                            A technology company building secure and scalable software solutions for businesses.
+                        </p>
+                    </div>
                     <div className="social-links">
                         <a href="https://www.youtube.com/@wigalvision6365" target="_blank" rel="noopener noreferrer">
                             <img src="/youtube.svg" alt="YouTube" className="social-icon" />
@@ -34,7 +38,7 @@ const Footer = () => {
                 </div>
 
                 {/* Company Column */}
-                <div className="footer-column">
+                <div className="footer-column col-company">
                     <h4>COMPANY</h4>
                     <ul className="footer-links">
                         <li><a href="/about">About</a></li>
@@ -43,16 +47,16 @@ const Footer = () => {
                 </div>
 
                 {/* Support Column */}
-                <div className="footer-column">
+                <div className="footer-column col-support">
                     <h4>SUPPORT</h4>
                     <ul className="footer-links">
                         <li><a href="/contact">Contact Us</a></li>
-                        <li><a href="/support">Support</a></li>
+                        <li><a href="https://support.wigal.com.gh/" target="_blank" rel="noopener noreferrer">Support</a></li>
                     </ul>
                 </div>
 
                 {/* Certifications Column */}
-                <div className="footer-column">
+                <div className="footer-column col-certifications">
                     <h4>CERTIFICATIONS</h4>
                     <div className="certifications-wrapper">
                         <img src="/pci-logo.png" alt="PCI DSS Compliant" className="cert-logo" />
@@ -65,9 +69,7 @@ const Footer = () => {
                 <div className="footer-legal-links">
                     <a href="/privacy">Privacy Policy</a>
                     <span className="separator">|</span>
-                    <a href="/refund">Refund Policy</a>
-                    <span className="separator">|</span>
-                    <a href="/terms">Terms of Use</a>
+                    <a href="/security">Security Policy</a>
                 </div>
                 <div className="copyright">
                     ©2026 Wigal Vision.

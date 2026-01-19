@@ -1,0 +1,220 @@
+.contact-page {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+/* Left Section - Image */
+.contact-image-section {
+    flex: 1;
+    background-image: url('/female-shopkeeper-smiling-camera.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    color: white;
+}
+
+.contact-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 1;
+}
+
+.contact-logo {
+    position: relative;
+    z-index: 2;
+    width: 120px;
+}
+
+.contact-image-footer {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.contact-copyright {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.contact-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-social-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s;
+}
+
+.contact-social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Right Section - Form */
+.contact-form-section {
+    flex: 1.2;
+    padding: 60px 80px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #21438D;
+    /* Wigal Blue */
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact-form-container {
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1A202C;
+}
+
+.required-star {
+    color: #E53E3E;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    padding: 12px 16px;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: 'Proxima Nova', sans-serif;
+    color: #2D3748;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    border-color: #3B82F6;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #CBD5E0;
+    /* Disabled look initially */
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Neo Sans Std', sans-serif;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #21438D;
+}
+
+/* Contact Info Grid */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: auto;
+}
+
+.info-item h4 {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #1A202C;
+    margin-bottom: 12px;
+}
+
+.info-item p {
+    color: #4A5568;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+    .contact-page {
+        flex-direction: column;
+    }
+
+    .contact-image-section {
+        min-height: 300px;
+        flex: none;
+    }
+
+    .contact-form-section {
+        padding: 40px 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+/* Input Error Style */
+.form-input.error,
+.form-select.error,
+.form-textarea.error {
+    border-color: #E53E3E;
+    /* Red color for error */
+}

@@ -51,6 +51,9 @@ const Features = () => {
                             <h3 className="feature-title">{feature.title}</h3>
                             <p className="feature-description">{feature.description}</p>
                         </div>
+
+
+
                         {feature.image && (
                             <div className="feature-image-wrapper">
                                 <img src={feature.image} alt={feature.title} className="feature-card-image" />

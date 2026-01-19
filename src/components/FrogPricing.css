@@ -1,0 +1,199 @@
+.frog-pricing-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.frog-pricing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.frog-pricing-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.pricing-top-label {
+    font-family: 'Neo Sans Std', sans-serif;
+    color: #218350;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.pricing-main-title {
+    font-family: 'Proxima Nova', sans-serif;
+    color: #4a5568;
+    font-size: 2rem;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: stretch;
+}
+
+.pricing-card {
+    background: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    color: #1a202c;
+}
+
+.pricing-card.highlighted {
+    background: #218350;
+    border-color: #218350;
+    color: white;
+    transform: scale(1.02);
+    z-index: 2;
+    box-shadow: 0 20px 40px rgba(33, 131, 80, 0.2);
+}
+
+.card-header {
+    padding: 30px 24px;
+    border-bottom: 1.5px solid #e2e8f0;
+    text-align: left;
+}
+
+.pricing-card.highlighted .card-header {
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.plan-title {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin: 0;
+    color: inherit;
+}
+
+.pricing-card:not(.highlighted) .plan-title {
+    color: #1a202c;
+}
+
+.pricing-card:not(.highlighted) .feature-item {
+    color: #4a5568;
+}
+
+.section-label {
+    display: block;
+    background: #f1f5f9;
+    color: #64748b;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Neo Sans Std', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pricing-card.highlighted .section-label {
+    background: rgba(255, 255, 255, 0.9);
+    color: #218350;
+}
+
+.voice-section,
+.bulk-section {
+    padding: 24px;
+    flex: 1;
+}
+
+.voice-section {
+    border-bottom: 1.5px solid #e2e8f0;
+}
+
+.pricing-card.highlighted .voice-section {
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.feature-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.check-icon {
+    width: 16px;
+    height: 16px;
+    color: #218350;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.pricing-card.highlighted .check-icon {
+    color: white;
+}
+
+.card-footer {
+    padding: 24px;
+}
+
+.purchase-btn {
+    width: 100%;
+    padding: 16px;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Neo Sans Std', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #218350;
+    color: white;
+}
+
+.pricing-card.highlighted .purchase-btn {
+    background: white;
+    color: #218350;
+}
+
+.purchase-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+    .pricing-grid {
+        gap: 20px;
+    }
+
+    .plan-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .pricing-card.highlighted {
+        transform: none;
+    }
+}

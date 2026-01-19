@@ -1,0 +1,141 @@
+.careers-culture-section {
+    padding: 100px 0;
+    background-color: white;
+    overflow: hidden;
+}
+
+.culture-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.culture-text {
+    max-width: 500px;
+}
+
+.culture-title {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 1.2;
+    color: #21438D;
+    margin-bottom: 24px;
+}
+
+.culture-description {
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Image Collage */
+.culture-images {
+    position: relative;
+    height: 500px;
+    width: 100%;
+}
+
+.image-card {
+    position: absolute;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border: 4px solid white;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Positioning based on the visual hierarchy from the mockup */
+
+/* Back/Top Right Image - Meeting/Office */
+.card-2 {
+    width: 280px;
+    height: 320px;
+    top: 0;
+    right: 40px;
+    z-index: 1;
+}
+
+/* Left/Middle Image - Lounge */
+.card-1 {
+    width: 240px;
+    height: 280px;
+    top: 80px;
+    left: 0;
+    z-index: 2;
+}
+
+/* Front/Bottom Right Image - Team/Flags */
+.card-3 {
+    width: 260px;
+    height: 260px;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+}
+
+/* Sparks/Decorations */
+.spark {
+    position: absolute;
+    z-index: 0;
+}
+
+.spark-1 {
+    top: 60px;
+    left: -20px;
+    /* Blue spark near left image */
+}
+
+.spark-2 {
+    top: -20px;
+    right: 20px;
+    /* Yellow spark near top image */
+}
+
+@media (max-width: 1024px) {
+    .culture-images {
+        height: 400px;
+    }
+
+    .card-2 {
+        width: 220px;
+        height: 260px;
+    }
+
+    .card-1 {
+        width: 200px;
+        height: 240px;
+    }
+
+    .card-3 {
+        width: 210px;
+        height: 210px;
+    }
+}
+
+@media (max-width: 768px) {
+    .culture-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .culture-text {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .culture-images {
+        height: 400px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}

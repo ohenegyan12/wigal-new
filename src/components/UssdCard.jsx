@@ -17,9 +17,14 @@ const UssdCard = () => {
                     <p className="ussd-description">
                         Dial in & interact — no internet needed! Smart USSD lets users tap a menu by dialing a short code and instantly get info or take actions right from their phone.
                     </p>
-                    <a href="mailto:support@wigal.com.gh" className="ussd-btn">
-                        <img src="/logo-arrow.svg" alt="" className="ussd-btn-icon" /> Contact Support
-                    </a>
+                    <div className="ussd-buttons">
+                        <a href="/smart-ussd" className="ussd-btn learn-more">
+                            Learn More
+                        </a>
+                        <a href="mailto:support@wigal.com.gh" className="ussd-btn contact-support">
+                            Contact Support <img src="/logo-arrow.svg" alt="" className="ussd-btn-icon" />
+                        </a>
+                    </div>
                 </div>
 
                 <div className="ussd-image-container">

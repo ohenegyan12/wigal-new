@@ -21,7 +21,7 @@ const ReddeGrid = () => {
                 >
                     <h3 className="redde-card-title">Get Paid Online with Redde</h3>
                     <p className="redde-card-desc">Redde is a secure payment platform that lets you collect payments for goods and services online, fast, safe, and with real-time transaction tracking.</p>
-                    <a href="#" className="redde-btn redde-btn-white">
+                    <a href="/redde" className="redde-btn redde-btn-white">
                         <img src="/logo-arrow.svg" alt="" className="redde-button-icon" /> Know More
                     </a>
                     <img src="/redde-mock.png" alt="Redde Dashboard Mockup" className="redde-mockup-large" />

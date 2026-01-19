@@ -1,0 +1,94 @@
+.asap-cta-section {
+    padding: 80px 24px;
+    background-color: white;
+    /* Clean white background */
+    display: flex;
+    justify-content: center;
+}
+
+.asap-cta-container {
+    max-width: 1000px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.asap-cta-content {
+    text-align: left;
+}
+
+.asap-cta-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1A202C;
+    margin-bottom: 16px;
+    font-family: 'Neo Sans Std', sans-serif;
+    line-height: 1.3;
+}
+
+.asap-cta-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4A5568;
+    margin-bottom: 32px;
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+.asap-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #6384FF;
+    /* Mockup blue */
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(99, 132, 255, 0.3);
+    font-family: 'Neo Sans Std', sans-serif;
+}
+
+.asap-cta-button:hover {
+    background-color: #5071EA;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(99, 132, 255, 0.4);
+}
+
+.asap-cta-image-wrapper {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    /* Optional shadow to match mockup feel if needed */
+    /* box-shadow: 0 10px 30px rgba(0,0,0,0.1); */
+}
+
+.asap-cta-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .asap-cta-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .asap-cta-content {
+        text-align: center;
+        order: 2;
+        /* Put text below image on mobile if preferred, or remove to keep text top */
+    }
+
+    .asap-cta-image-wrapper {
+        order: 1;
+    }
+}

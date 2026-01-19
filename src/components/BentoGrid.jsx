@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MoveRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './BentoGrid.css';
 
 const BentoGrid = () => {
@@ -23,9 +24,9 @@ const BentoGrid = () => {
                 >
                     <h3 className="bento-card-title">Say Hello to FROG</h3>
                     <p className="bento-card-desc">FROG is your all-in-one messaging buddy! Whether it's text, voice, or email, you can send messages that get noticed, at great rates and with simple tools that anyone can use.</p>
-                    <a href="#" className="bento-btn btn-white">
+                    <Link to="/frog" className="bento-btn btn-white">
                         <img src="/logo-arrow.svg" alt="" className="button-icon" /> Learn More
-                    </a>
+                    </Link>
                     <img src="/FROG-MOC-1.png" alt="FROG Dashboard Mockup" className="bento-mockup-large" />
                 </motion.div>
 

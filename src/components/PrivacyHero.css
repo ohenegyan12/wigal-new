@@ -1,0 +1,60 @@
+.privacy-hero-section {
+    background: linear-gradient(180deg, #21438D 0%, #3B5BB0 40%, #D1DBEE 80%, #FFFFFF 100%);
+    padding: 200px 24px 80px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    min-height: 450px;
+}
+
+.privacy-hero-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.privacy-hero-title {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    line-height: 1.2;
+    max-width: 900px;
+}
+
+.privacy-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.compliance-logo {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .privacy-hero-section {
+        padding-top: 150px;
+    }
+
+    .privacy-hero-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .compliance-logo {
+        height: 40px;
+    }
+}

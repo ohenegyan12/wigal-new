@@ -1,0 +1,171 @@
+.frog-hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #218350 0%, #1a6b41 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+.frog-hero-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.frog-hero-content {
+    flex: 1;
+    max-width: 600px;
+    color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.frog-hero-title {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 32px;
+}
+
+.frog-hero-description {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    max-width: 580px;
+}
+
+.frog-hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 36px;
+    background: white;
+    color: #218350;
+    font-family: 'Neo Sans Std', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.frog-hero-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.frog-hero-button .button-arrow {
+    width: 20px;
+    height: 20px;
+    /* This filter targets #21438D (the brand blue used on the home page) */
+    filter: invert(21%) sepia(34%) saturate(3665%) rotate(205deg) brightness(91%) contrast(92%);
+}
+
+.frog-hero-image-card-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    perspective: 1200px;
+}
+
+.frog-hero-image-card {
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+    transform: none;
+}
+
+.frog-hero-card-img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transform: none;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .frog-hero-section {
+        padding-top: 140px;
+        padding-bottom: 60px;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .frog-hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .frog-hero-content {
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .frog-hero-title {
+        font-size: 3.5rem;
+    }
+
+    .frog-hero-description {
+        font-size: 1.15rem;
+        margin-bottom: 32px;
+    }
+
+    .frog-hero-image-card-wrapper {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .frog-hero-image-card {
+        max-width: 100%;
+        transform: none;
+        /* Remove 3D tilt on mobile for better visibility */
+    }
+
+    .frog-hero-card-img {
+        height: 450px;
+        border-radius: 32px;
+        transform: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .frog-hero-title {
+        font-size: 2.75rem;
+    }
+
+    .frog-hero-description {
+        font-size: 1.1rem;
+    }
+
+    .frog-hero-card-img {
+        height: 350px;
+        border-radius: 24px;
+    }
+
+    .frog-hero-button {
+        width: 100%;
+        justify-content: center;
+        padding: 16px 24px;
+    }
+}

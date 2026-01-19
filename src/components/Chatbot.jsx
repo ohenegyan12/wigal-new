@@ -9,6 +9,7 @@ const Chatbot = () => {
         { id: 1, text: "Hi there! Looking to book a meeting or learn more about Wigal?", sender: 'bot' }
     ]);
     const [inputValue, setInputValue] = useState("");
+    const [isTyping, setIsTyping] = useState(false);
 
     const handleSendMessage = (e, text = null) => {
         if (e) e.preventDefault();
@@ -23,6 +24,7 @@ const Chatbot = () => {
 
         setMessages([...messages, newUserMessage]);
         setInputValue("");
+        setIsTyping(true);
 
         // Simulate bot response
         setTimeout(() => {
@@ -31,8 +33,9 @@ const Chatbot = () => {
                 text: "Thanks for reaching out! We'll get back to you shortly.",
                 sender: 'bot'
             };
+            setIsTyping(false);
             setMessages(prev => [...prev, botResponse]);
-        }, 1000);
+        }, 2000);
     };
 
     return (
@@ -43,13 +46,13 @@ const Chatbot = () => {
                         className="chatbot-window"
                         initial={{ opacity: 0, scale: 0.9, y: 20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
-                        exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                        exit={{ opacity: 0, scale: 0.9, y: 0 }}
                         transition={{ duration: 0.2 }}
                     >
                         <div className="chat-header">
                             <div className="chat-brand">
                                 <div className="brand-logo-container">
-                                    <img src="/logo-blue.png" alt="Wigal" className="brand-logo" />
+                                    <img src="/favicon.png" alt="Wigal" className="brand-logo" />
                                 </div>
                                 <span className="brand-name">Wigal</span>
                             </div>
@@ -66,14 +69,28 @@ const Chatbot = () => {
                                     </div>
                                     {msg.sender === 'bot' && (
                                         <div className="bot-meta">
-                                            <img src="/logo-blue.png" alt="Bot" className="bot-avatar-small" />
+                                            <img src="/favicon.png" alt="Bot" className="bot-avatar-small" />
                                             <span className="bot-name">Wigal</span>
                                         </div>
                                     )}
                                 </div>
                             ))}
 
-                            {messages.length === 1 && (
+                            {isTyping && (
+                                <div className="message-wrapper bot">
+                                    <div className="typing-indicator">
+                                        <div className="typing-dot"></div>
+                                        <div className="typing-dot"></div>
+                                        <div className="typing-dot"></div>
+                                    </div>
+                                    <div className="bot-meta">
+                                        <img src="/favicon.png" alt="Bot" className="bot-avatar-small" />
+                                        <span className="bot-name">Wigal</span>
+                                    </div>
+                                </div>
+                            )}
+
+                            {messages.length === 1 && !isTyping && (
                                 <div className="chat-actions">
                                     <button className="action-pill" onClick={() => handleSendMessage(null, "Schedule a Meeting with Sales 🗓")}>
                                         Schedule a Meeting with Sales 🗓

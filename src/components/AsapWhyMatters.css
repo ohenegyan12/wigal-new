@@ -1,0 +1,83 @@
+.asap-why-matters-section {
+    padding: 100px 24px;
+    background-color: white;
+    text-align: center;
+}
+
+.asap-why-header {
+    margin-bottom: 80px;
+}
+
+.asap-why-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1A202C;
+    font-family: 'Neo Sans Std', sans-serif;
+}
+
+.asap-why-content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.asap-why-image-container {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.asap-why-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.asap-why-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    text-align: left;
+}
+
+.asap-why-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 1.15rem;
+    color: #1A202C;
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 600;
+}
+
+.asap-check-icon {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    background-color: #EBF8FF;
+    /* Light blue background for check */
+    color: #3182CE;
+    /* Blue check color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    .asap-why-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .asap-why-image-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}

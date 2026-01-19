@@ -3,7 +3,7 @@
     bottom: 30px;
     right: 30px;
     z-index: 9999;
-    font-family: 'Inter', 'Proxima Nova', sans-serif;
+    font-family: 'Proxima Nova', sans-serif;
 }
 
 .chatbot-toggle {
@@ -304,6 +304,48 @@
     font-size: 0.7rem;
     color: #9CA3AF;
     line-height: 1.3;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 16px;
+    background-color: #F3F4F6;
+    border-radius: 12px;
+    border-bottom-left-radius: 4px;
+    width: fit-content;
+    align-self: flex-start;
+}
+
+.typing-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #9CA3AF;
+    border-radius: 50%;
+    animation: typingBounce 1.4s infinite ease-in-out both;
+}
+
+.typing-dot:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.typing-dot:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes typingBounce {
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0);
+    }
+
+    40% {
+        transform: scale(1);
+    }
 }
 
 @media (max-width: 640px) {

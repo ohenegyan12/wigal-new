@@ -172,6 +172,48 @@
     filter: invert(16%) sepia(96%) saturate(3840%) hue-rotate(349deg) brightness(88%) contrast(98%);
 }
 
+/* Image Base Styles */
+.redde-person-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 75%;
+    height: auto;
+    object-fit: contain;
+}
+
+.redde-mockup-large {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    width: 60%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: none;
+    max-width: 100%;
+    transform: translate(0, 25%);
+}
+
+.redde-illustration-mint {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: -5px;
+}
+
+.redde-api-illustration {
+    position: absolute;
+    bottom: -40px;
+    right: 15px;
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+}
+
 @media (max-width: 1024px) {
     .redde-grid {
         grid-template-columns: 1fr 1fr;
@@ -185,6 +227,14 @@
     .redde-card-blue,
     .redde-card-grey {
         grid-column: span 2;
+    }
+
+    .redde-person-image {
+        bottom: -50px;
+    }
+
+    .redde-api-illustration {
+        bottom: -90px;
     }
 }
 
@@ -223,47 +273,4 @@
     .redde-person-image {
         display: none;
     }
-}
-
-.redde-person-image {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 75%;
-    /* Start smaller, adjust based on image */
-    height: auto;
-    object-fit: contain;
-}
-
-.redde-mockup-large {
-    position: absolute;
-    bottom: 0;
-    right: 20px;
-    width: 60%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: none;
-    max-width: 100%;
-    transform: translate(0, 25%);
-}
-
-.redde-illustration-mint {
-    position: absolute;
-    bottom: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 130%;
-    height: auto;
-    object-fit: contain;
-    margin-bottom: -5px;
-    /* Adjust to sit flush */
-}
-
-.redde-api-illustration {
-    position: absolute;
-    bottom: -40px;
-    right: 15px;
-    width: 60%;
-    height: auto;
-    object-fit: contain;
 }

@@ -1,0 +1,94 @@
+.smart-ussd-features-section {
+    padding: 120px 24px;
+    background-color: white;
+}
+
+.smart-ussd-features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.smart-ussd-feature-row {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.smart-ussd-feature-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.smart-ussd-feature-content {
+    flex: 1;
+}
+
+.smart-ussd-feature-title {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #03140C;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.smart-ussd-feature-description {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4a5568;
+}
+
+.smart-ussd-feature-image-wrapper {
+    flex: 1;
+    position: relative;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.smart-ussd-feature-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.smart-ussd-feature-image-wrapper:hover .smart-ussd-feature-img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+    .smart-ussd-features-container {
+        gap: 80px;
+    }
+
+    .smart-ussd-feature-row,
+    .smart-ussd-feature-row.reverse {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .smart-ussd-feature-row {
+        flex-direction: column-reverse;
+        /* Put image on top always for mobile if desired, or keep as column to stack text then image */
+    }
+
+    /* Let's strictly follow the design: Image usually comes first on mobile or text? 
+       Standard practice: Image then text, or Text then Image.
+       Let's keep the flow: Title/Text first, then Image.
+    */
+    .smart-ussd-feature-row {
+        flex-direction: column;
+    }
+
+    .smart-ussd-feature-row.reverse {
+        flex-direction: column;
+    }
+
+    .smart-ussd-feature-title {
+        font-size: 1.75rem;
+    }
+}

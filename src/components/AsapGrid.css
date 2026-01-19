@@ -130,28 +130,7 @@
     filter: invert(30%) sepia(99%) saturate(1833%) hue-rotate(227deg) brightness(101%) contrast(98%);
 }
 
-@media (max-width: 1024px) {
-    .asap-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .asap-card {
-        min-height: auto;
-        padding: 40px 30px;
-    }
-}
-
-@media (max-width: 640px) {
-    .asap-title {
-        font-size: 2rem;
-    }
-
-    .asap-bulk-illustration,
-    .asap-access-illustration {
-        display: none;
-    }
-}
-
+/* Illustration Base Styles */
 .asap-bulk-illustration {
     position: absolute;
     bottom: -1px;
@@ -169,4 +148,40 @@
     width: 55%;
     height: auto;
     object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+    .asap-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .asap-card {
+        min-height: auto;
+        padding: 40px 30px;
+    }
+
+    .asap-access-illustration {
+        right: -80px;
+        bottom: -260px;
+        max-width: 60%;
+    }
+
+    .asap-bulk-illustration {
+        bottom: -80px;
+        max-width: 60%;
+        left: auto;
+        transform: none;
+        right: -140px;
+    }
+}
+
+@media (max-width: 640px) {
+    .asap-title {
+        font-size: 2rem;
+    }
+
+    .asap-bulk-illustration,
+    .asap-access-illustration {
+        display: none;
+    }
 }

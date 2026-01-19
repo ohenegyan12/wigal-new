@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './AsapGrid.css';
 
@@ -35,9 +36,9 @@ const AsapGrid = () => {
                 >
                     <h3 className="asap-card-title">Access ASAP Payments</h3>
                     <p className="asap-card-desc">Log in or create an account to start sending bulk payments instantly. Manage payouts, track transactions, and make money moves in minutes!</p>
-                    <a href="https://asap.wigal.com.gh/login" target="_blank" rel="noopener noreferrer" className="asap-btn btn-white-blue">
+                    <Link to="/asap" className="asap-btn btn-white-blue">
                         <img src="/logo-arrow.svg" alt="" className="asap-btn-icon" /> Continue To ASAP
-                    </a>
+                    </Link>
                     <img src="/access-payment-asap.png" alt="Happy customer" className="asap-access-illustration" />
                 </motion.div>
             </div>

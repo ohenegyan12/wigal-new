@@ -1,0 +1,197 @@
+.frog-cta-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.frog-cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.frog-cta-header {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.frog-cta-main-title {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.frog-cta-main-subtitle {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 1.125rem;
+    color: #4a5568;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.cta-card {
+    border-radius: 24px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+
+.cta-green {
+    background-color: #218350;
+    display: flex;
+    flex-direction: column;
+}
+
+.cta-black {
+    background-color: #161616;
+}
+
+.cta-card-content {
+    color: white;
+    position: relative;
+    z-index: 2;
+    max-width: 400px;
+}
+
+.cta-card-title {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.cta-card-desc {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 32px;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border-radius: 8px;
+    font-family: 'Neo Sans Std', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button-arrow {
+    width: 18px;
+    height: 18px;
+    /* Brand color filter for consistency if needed */
+}
+
+/* Laptop Mockup Styles */
+.cta-laptop-wrapper {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 450px;
+    z-index: 1;
+}
+
+.cta-laptop-img {
+    width: 100%;
+    height: auto;
+}
+
+/* Person Image Styles */
+.cta-card-flex {
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+}
+
+.cta-person-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: -60px;
+    width: 60%;
+    height: 90%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.cta-person-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom right;
+}
+
+@media (max-width: 1024px) {
+    .cta-card {
+        padding: 30px;
+        height: 450px;
+    }
+
+    .frog-cta-main-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .cta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-card {
+        height: auto;
+        min-height: 400px;
+    }
+
+    .cta-green {
+        padding-bottom: 0;
+    }
+
+    .cta-laptop-wrapper {
+        position: relative;
+        bottom: 0;
+        margin-top: 40px;
+        max-width: 350px;
+    }
+
+    .cta-card-flex {
+        flex-direction: column;
+    }
+
+    .cta-person-wrapper {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .frog-cta-main-title {
+        font-size: 2rem;
+    }
+
+    .cta-card-title {
+        font-size: 1.5rem;
+    }
+}

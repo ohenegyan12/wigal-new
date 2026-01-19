@@ -1,0 +1,142 @@
+.frog-app-section {
+    padding: 80px 0 120px;
+    background-color: #ffffff;
+}
+
+.frog-app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.frog-app-card {
+    background: linear-gradient(135deg, #218350 0%, #3ba671 100%);
+    border-radius: 40px;
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+}
+
+.frog-app-content {
+    flex: 1;
+    max-width: 550px;
+    color: white;
+    z-index: 2;
+}
+
+.frog-app-title {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 32px;
+}
+
+.frog-app-desc {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.95;
+    max-width: 480px;
+}
+
+.app-badges {
+    display: flex;
+    gap: 16px;
+}
+
+.app-badge img {
+    height: 48px;
+    width: auto;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.app-badge:hover img {
+    transform: translateY(-2px);
+}
+
+.frog-app-image-wrapper {
+    position: absolute;
+    right: 80px;
+    bottom: -250px;
+    width: 350px;
+    z-index: 1;
+}
+
+.frog-phone-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 1100px) {
+    .frog-app-title {
+        font-size: 3rem;
+    }
+
+    .frog-app-card {
+        padding: 60px;
+    }
+
+    .frog-app-image-wrapper {
+        width: 320px;
+        right: 40px;
+        bottom: -80px;
+    }
+}
+
+@media (max-width: 900px) {
+    .frog-app-card {
+        flex-direction: column;
+        padding: 60px 40px;
+        text-align: center;
+        min-height: auto;
+    }
+
+    .frog-app-content {
+        max-width: 100%;
+        margin-bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .frog-app-desc {
+        max-width: 100%;
+    }
+
+    .frog-app-image-wrapper {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .frog-app-title {
+        font-size: 2.5rem;
+    }
+
+    .frog-app-desc {
+        font-size: 1.1rem;
+    }
+
+    .app-badges {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .app-badge img {
+        height: 44px;
+        margin: 0 auto;
+    }
+
+    .frog-app-card {
+        padding: 40px 20px;
+        border-radius: 32px;
+    }
+}

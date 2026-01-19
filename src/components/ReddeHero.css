@@ -1,0 +1,124 @@
+.redde-hero-section {
+    background-color: #A81F25;
+    padding: 160px 20px 0;
+    height: 850px;
+    /* Height increased to show more of the mockup */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    /* This will cut the image at the boundary */
+    position: relative;
+    z-index: 1;
+}
+
+.redde-hero-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.redde-hero-content {
+    max-width: 800px;
+    margin-bottom: 60px;
+}
+
+.redde-hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+.redde-hero-description {
+    font-size: 1.35rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 40px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.redde-hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: white;
+    color: #A81F25;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.redde-hero-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    background-color: #f8f8f8;
+}
+
+.button-arrow {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) saturate(100%) invert(14%) sepia(85%) saturate(3681%) hue-rotate(352deg) brightness(89%) contrast(92%);
+}
+
+.redde-hero-image-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.redde-hero-mockup {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.redde-hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .redde-hero-section {
+        padding-top: 120px;
+        padding-bottom: 40px;
+        min-height: auto;
+    }
+
+    .redde-hero-container {
+        padding-bottom: 40px;
+    }
+
+    .redde-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .redde-hero-description {
+        font-size: 1.1rem;
+    }
+
+    .redde-hero-image-wrapper {
+        border-radius: 15px;
+        padding: 8px;
+    }
+
+    .redde-hero-mockup {
+        border-radius: 10px;
+    }
+}

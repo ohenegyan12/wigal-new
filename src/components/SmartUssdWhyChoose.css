@@ -1,0 +1,72 @@
+.smart-ussd-why-section {
+    padding: 100px 24px;
+    background-color: #AEE6FF;
+    /* Matching the light blue from the screenshot */
+    text-align: center;
+}
+
+.smart-ussd-why-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.smart-ussd-why-title {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #03140C;
+    margin-bottom: 60px;
+}
+
+.smart-ussd-why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.smart-ussd-why-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.smart-ussd-why-image-wrapper {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.smart-ussd-why-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.smart-ussd-why-card:hover .smart-ussd-why-img {
+    transform: scale(1.05);
+}
+
+.smart-ussd-why-description {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #03140C;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .smart-ussd-why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .smart-ussd-why-grid {
+        grid-template-columns: 1fr;
+    }
+}

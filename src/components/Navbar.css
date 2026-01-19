@@ -67,6 +67,19 @@
     color: #21438D;
 }
 
+.nav-link.scrolled.frog-theme {
+    color: #218350;
+}
+
+.nav-link.scrolled.redde-theme {
+    color: #A81F25;
+}
+
+.nav-link.scrolled.smart-ussd-theme,
+.nav-link.smart-ussd-theme {
+    color: #1596BC !important;
+}
+
 .nav-link:hover {
     opacity: 0.8;
 }
@@ -176,6 +189,20 @@
     background: #21438D;
 }
 
+.navbar.frog-theme .burger-icon.scrolled span {
+    background: #218350;
+}
+
+.navbar.redde-theme .burger-icon.scrolled span {
+    background: #A81F25;
+}
+
+/* Smart USSD Theme - Always Blue Burger (since Hero is white) */
+.navbar.smart-ussd-theme .burger-icon span,
+.navbar.smart-ussd-theme .burger-icon.scrolled span {
+    background: #1596BC;
+}
+
 /* Open state for burger menu */
 .burger-icon.open span:nth-child(1) {
     top: 9px;
@@ -247,18 +274,23 @@
         background: rgba(255, 255, 255, 0.05);
     }
 
-    .nav-link {
+    .nav-link,
+    .nav-link.scrolled,
+    .nav-link.frog-theme,
+    .nav-link.scrolled.frog-theme,
+    .nav-link.redde-theme,
+    .nav-link.scrolled.redde-theme,
+    .nav-link.smart-ussd-theme,
+    .nav-link.scrolled.smart-ussd-theme,
+    .nav-link.asap-theme,
+    .nav-link.scrolled.asap-theme {
+        color: white !important;
+        /* Always white on the blue mobile menu */
         width: 100%;
         font-size: 1.25rem;
         justify-content: center;
         padding: 1.25rem 0;
-        color: white;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .nav-link.scrolled {
-        color: white;
-        /* Always white on the blue mobile menu */
     }
 
     /* Remove hover opacity on mobile to avoid flicker */
@@ -317,3 +349,14 @@
    Use :has selector or modify JSX. 
    I'll modify JSX next to toggle logo visibility class or just handle it in CSS if I assume "activate" means "appear in the menu".
 */
+
+/* ASAP Theme Styles */
+@media (min-width: 901px) {
+    .nav-link.scrolled.asap-theme {
+        color: #3B5AFB !important;
+    }
+}
+
+.navbar.asap-theme .burger-icon.scrolled span {
+    background: #3B5AFB;
+}

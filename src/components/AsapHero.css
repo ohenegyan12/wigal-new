@@ -1,0 +1,133 @@
+.asap-hero-section {
+    background-color: #6384FF;
+    /* Matching the mockup blue */
+    padding: 160px 40px 100px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.asap-hero-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.asap-hero-content {
+    max-width: 600px;
+}
+
+.asap-hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+    font-family: 'Neo Sans Std', sans-serif;
+    color: white;
+}
+
+.asap-hero-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 40px;
+    max-width: 100%;
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+.asap-hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: white;
+    color: #6384FF;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Neo Sans Std', sans-serif;
+}
+
+.asap-hero-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    opacity: 0.95;
+    background-color: #f0f0f0;
+}
+
+.button-arrow-icon {
+    /* No filter needed since we want the natural color (blue from SVG if applied, or current color) */
+    /* Since we set color: #6384FF on parent, SVG should inherit or use currentColor */
+    color: #6384FF;
+}
+
+.asap-hero-image-wrapper {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    z-index: 10;
+}
+
+.asap-hero-mockup {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    line-height: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.asap-hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+@media (max-width: 1024px) {
+    .asap-hero-section {
+        padding-top: 140px;
+        text-align: center;
+        display: block;
+        /* Stack vertically */
+    }
+
+    .asap-hero-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .asap-hero-content {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .asap-hero-image-wrapper {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .asap-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .asap-hero-description {
+        font-size: 1rem;
+    }
+}

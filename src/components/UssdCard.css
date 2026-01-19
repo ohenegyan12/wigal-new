@@ -47,12 +47,17 @@
     margin-bottom: 32px;
 }
 
+.ussd-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    /* Handle smaller screens gracefully */
+}
+
 .ussd-btn {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background-color: white;
-    color: #1A202C;
     padding: 14px 28px;
     border-radius: 8px;
     font-family: 'Neo Sans Std', sans-serif;
@@ -60,6 +65,19 @@
     font-size: 1rem;
     text-decoration: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ussd-btn.contact-support {
+    background-color: white;
+    color: #1A202C;
+}
+
+.ussd-btn.learn-more {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 28px;
+    /* Adjust padding to account for border */
 }
 
 .ussd-btn:hover {
@@ -107,6 +125,10 @@
         align-items: center;
     }
 
+    .ussd-buttons {
+        justify-content: center;
+    }
+
     .ussd-image-container {
         position: relative;
         right: auto;
@@ -123,6 +145,16 @@
 }
 
 @media (max-width: 640px) {
+    .ussd-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .ussd-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
     .ussd-image-container {
         display: none;
     }

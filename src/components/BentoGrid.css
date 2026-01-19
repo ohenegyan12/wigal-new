@@ -233,6 +233,18 @@
     .card-blue {
         grid-column: span 2;
     }
+
+    .bento-person-image {
+        bottom: -70px;
+    }
+
+    .bento-voice-image {
+        bottom: -80px;
+    }
+
+    .bento-sms-image {
+        bottom: -260px;
+    }
 }
 
 @media (max-width: 640px) {

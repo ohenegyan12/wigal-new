@@ -1,0 +1,125 @@
+.careers-hero-container {
+    padding-top: 180px;
+    /* Space for Navbar */
+    padding-bottom: 60px;
+    text-align: center;
+    color: white;
+}
+
+.careers-content {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.careers-title {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+.careers-subtitle {
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 800px;
+}
+
+.careers-cta-btn {
+    background: white;
+    color: #21438D;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.careers-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.careers-cta-btn svg path {
+    stroke: #21438D;
+}
+
+/* Gallery Grid */
+.careers-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    align-items: flex-end;
+    /* Align bottom or center? Screenshot shows roughly aligned but center one might be larger/higher? */
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.gallery-item-wrapper {
+    position: relative;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.gallery-item {
+    width: 300px;
+    height: 220px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Center item slightly larger or same? Screen shot shows they look similar size, maybe center is prominent. I'll keep them same size for now but maybe taller center. */
+.gallery-item-wrapper.center .gallery-item {
+    height: 260px;
+    width: 320px;
+    /* Slight highlight */
+}
+
+/* Dashed Borders */
+.dashed-border {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px dashed rgba(255, 255, 255, 0.4);
+    border-radius: 24px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Make dashed border offset differently? 
+   The prompt screenshot shows dashed border neatly wrapping or offset. 
+   I'll stick to a nice outer offset. */
+
+@media (max-width: 768px) {
+    .careers-title {
+        font-size: 32px;
+    }
+
+    .careers-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}

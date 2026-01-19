@@ -1,0 +1,86 @@
+.careers-vacancy-section {
+    padding: 100px 24px;
+    background-color: white;
+    text-align: center;
+}
+
+.vacancy-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vacancy-header {
+    margin-bottom: 40px;
+}
+
+.vacancy-tag {
+    color: #21438D;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 12px;
+    font-family: 'Neo Sans Std', sans-serif;
+}
+
+.vacancy-title {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 2.5rem;
+    color: #1A202C;
+    margin-bottom: 8px;
+    font-weight: 800;
+}
+
+.vacancy-subtitle {
+    font-family: 'Proxima Nova', sans-serif;
+    color: #A0AEC0;
+    /* Light grey for "Find your role" */
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.vacancy-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+}
+
+.vacancy-image-wrapper {
+    margin-bottom: 30px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vacancy-image {
+    max-height: 100%;
+    width: auto;
+}
+
+.vacancy-status {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 1.5rem;
+    color: #1A202C;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.vacancy-description {
+    font-family: 'Proxima Nova', sans-serif;
+    color: #4A5568;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+@media (max-width: 768px) {
+    .vacancy-title {
+        font-size: 2rem;
+    }
+
+    .vacancy-status {
+        font-size: 1.25rem;
+    }
+}
