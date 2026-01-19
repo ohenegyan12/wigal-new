@@ -178,19 +178,42 @@
     }
 
     .tabs-container {
-        grid-template-columns: repeat(4, 1fr);
-        /* 4 logos in a row */
-        gap: 8px;
+        display: flex;
+        overflow-x: auto;
+        gap: 12px;
+        padding-bottom: 8px;
+        /* For scrollbar breathing room */
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE/Edge */
+        scroll-snap-type: x mandatory;
+        width: 100vw;
+        margin-left: -24px;
+        margin-right: -24px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .tabs-container::-webkit-scrollbar {
+        display: none;
+        /* Chrome/Safari */
     }
 
     .tab-item {
+        flex: 0 0 auto;
+        width: 80px;
+        /* Fixed width for better control */
+        height: 80px;
+        /* Fixed height to match width */
         padding: 12px;
         border-radius: 12px;
+        display: flex;
+        /* Ensure flex context for centering */
         align-items: center;
         justify-content: center;
-        height: auto;
         aspect-ratio: 1;
-        /* Square for logos */
+        scroll-snap-align: center;
     }
 
     .tab-content-desktop {
