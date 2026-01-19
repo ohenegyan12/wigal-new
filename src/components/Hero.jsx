@@ -12,6 +12,7 @@ const products = [
         heroTitle: 'Grow Engagement with Powerful Messaging Tools',
         heroDescription: "Send Bulk SMS, Voice SMS, IVR or Email campaigns easily and reliably with FROG Ghana's leading messaging platform.",
         buttonText: 'Get Started with FROG',
+        link: 'https://frog.wigal.com.gh/login',
         video: 'https://res.cloudinary.com/dg41c7v3d/video/upload/v1768842642/frog-new_jnuwpj.mp4',
         logo: '/frog-logo.svg'
     },
@@ -22,6 +23,7 @@ const products = [
         heroTitle: 'Accept Payments Your Way with Redde',
         heroDescription: 'Collect mobile money and card payments securely and easily with Redde, the payment gateway built for your business.',
         buttonText: 'Start Collecting Payments',
+        link: 'https://app.reddeonline.com/login?return=%2Fdashboard',
         gif: null,
         logo: '/redde-logo.svg'
     },
@@ -32,6 +34,7 @@ const products = [
         heroTitle: 'Engage Your Customers with Smart USSD',
         heroDescription: 'Create fast, reliable, and accessible USSD experiences for all mobile phones without requiring an internet connection.',
         buttonText: 'Contact Support',
+        link: 'https://support.wigal.com.gh/',
         gif: null,
         logo: '/ussd-logo.svg'
     },
@@ -42,6 +45,7 @@ const products = [
         heroTitle: 'Simplify Mass Payouts with ASAP',
         heroDescription: 'Disburse money to thousands of mobile money wallets and bank accounts instantly with the click of a button.',
         buttonText: 'Make a Payout',
+        link: 'https://asap.wigal.com.gh/login',
         gif: null,
         logo: '/asap-logo.png'
     }
@@ -125,6 +129,7 @@ const Hero = () => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3 }}
+                    onClick={() => activeTab.link && window.open(activeTab.link, '_blank')}
                 >
                     <img src="/logo-arrow.svg" alt="" className="button-icon" />
                     <Typewriter text={activeTab.buttonText} delay={0.02} style={{ display: 'inline-flex', marginLeft: '8px' }} />
