@@ -151,8 +151,17 @@
     }
 
     .ivr-modal-image-col {
-        height: 200px;
+        height: auto;
+        min-height: 250px;
         order: -1;
+        padding: 16px;
+    }
+
+    .ivr-modal-close {
+        top: 24px;
+        right: 24px;
+        width: 32px;
+        height: 32px;
     }
 
     .ivr-modal-content {
