@@ -31,7 +31,7 @@ const SmartUssdHero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
                     >
-                        <a href="mailto:support@wigal.com.gh" className="smart-ussd-hero-button">
+                        <a href="/contact" className="smart-ussd-hero-button">
                             <ArrowRight className="button-arrow-icon" size={20} color="white" style={{ marginRight: '8px' }} /> Contact Support
                         </a>
                     </motion.div>

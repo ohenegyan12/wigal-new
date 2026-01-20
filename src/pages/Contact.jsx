@@ -84,7 +84,9 @@ const Contact = () => {
         <div className="contact-page">
             <div className="contact-image-section">
                 <div className="contact-image-overlay"></div>
-                <img src="/logo-white.png" alt="Wigal" className="contact-logo" />
+                <Link to="/">
+                    <img src="/logo-white.png" alt="Wigal" className="contact-logo" />
+                </Link>
 
                 <div className="contact-image-footer">
                     <div className="contact-copyright">©2026 Wigal Vision.</div>

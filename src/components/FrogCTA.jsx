@@ -50,7 +50,7 @@ const FrogCTA = () => {
                             <div className="cta-card-content">
                                 <h3 className="cta-card-title">Need Help or Support?</h3>
                                 <p className="cta-card-desc">Our team is here for you — whether it's setup, troubleshooting, or questions about your account.</p>
-                                <a href="mailto:support@wigal.com.gh" className="cta-button">
+                                <a href="/contact" className="cta-button">
                                     <img src="/logo-arrow.svg" alt="" className="button-arrow" /> Contact Support
                                 </a>
                             </div>

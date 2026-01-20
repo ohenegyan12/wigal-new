@@ -20,7 +20,7 @@ const SmartUssdSupport = () => {
                     <p className="smart-ussd-support-description">
                         If you need assistance launching or customizing your Smart USSD solution, our support team is ready to guide you — from setup to live deployment.
                     </p>
-                    <a href="mailto:support@wigal.com.gh" className="smart-ussd-support-btn">
+                    <a href="/contact" className="smart-ussd-support-btn">
                         <ArrowRight size={20} color="#03140C" strokeWidth={2} style={{ marginRight: '4px' }} /> Contact Support
                     </a>
                 </motion.div>

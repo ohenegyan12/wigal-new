@@ -34,7 +34,7 @@ const products = [
         heroTitle: 'Engage Your Customers with Smart USSD',
         heroDescription: 'Create fast, reliable, and accessible USSD experiences for all mobile phones without requiring an internet connection.',
         buttonText: 'Contact Support',
-        link: 'https://support.wigal.com.gh/',
+        link: '/contact',
         gif: null,
         logo: '/ussd-logo.svg'
     },

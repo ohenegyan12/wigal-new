@@ -21,7 +21,7 @@ const UssdCard = () => {
                         <a href="/smart-ussd" className="ussd-btn learn-more">
                             Learn More
                         </a>
-                        <a href="mailto:support@wigal.com.gh" className="ussd-btn contact-support">
+                        <a href="/contact" className="ussd-btn contact-support">
                             Contact Support <img src="/logo-arrow.svg" alt="" className="ussd-btn-icon" />
                         </a>
                     </div>

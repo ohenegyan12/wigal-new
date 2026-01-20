@@ -20,7 +20,7 @@ const AsapCTA = () => {
                     <p className="asap-cta-description">
                         Our support team can guide you through setup, scheduling, and API integration so you can start paying instantly.
                     </p>
-                    <a href="mailto:support@wigal.com.gh" className="asap-cta-button">
+                    <a href="/contact" className="asap-cta-button">
                         <ArrowRight size={20} /> Contact Support
                     </a>
                 </motion.div>
