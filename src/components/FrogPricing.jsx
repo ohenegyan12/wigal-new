@@ -22,7 +22,7 @@ const plans = [
         highlight: false
     },
     {
-        title: 'Standard Plan(₵)',
+        title: 'Standard (₵)',
         voiceSms: [
             'GH₵ 100 for 625 minutes',
             'GH₵ 200 for 1,250 minutes',
@@ -38,7 +38,7 @@ const plans = [
         highlight: true
     },
     {
-        title: 'Premium Plan(₵)',
+        title: 'Premium (₵)',
         voiceSms: [
             'GH₵ 1000 for 6,250 minutes',
             'GH₵ 2000 for 12,500 minutes'
