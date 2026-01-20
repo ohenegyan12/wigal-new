@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { MoveRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import IVRModal from './IVRModal';
 import './Hero.css';
 
 const products = [
@@ -24,7 +25,7 @@ const products = [
         heroDescription: 'Collect mobile money and card payments securely and easily with Redde, the payment gateway built for your business.',
         buttonText: 'Start Collecting Payments',
         link: 'https://app.reddeonline.com/login?return=%2Fdashboard',
-        gif: null,
+        video: 'https://res.cloudinary.com/dg41c7v3d/video/upload/v1768907323/redde_jkotzm.mov',
         logo: '/redde-logo.svg'
     },
     {
@@ -35,7 +36,7 @@ const products = [
         heroDescription: 'Create fast, reliable, and accessible USSD experiences for all mobile phones without requiring an internet connection.',
         buttonText: 'Contact Support',
         link: '/contact',
-        gif: null,
+        video: 'https://res.cloudinary.com/dg41c7v3d/video/upload/v1768908145/smartussd_ajjpsb.mov',
         logo: '/ussd-logo.svg'
     },
     {
@@ -46,7 +47,7 @@ const products = [
         heroDescription: 'Disburse money to thousands of mobile money wallets and bank accounts instantly with the click of a button.',
         buttonText: 'Make a Payout',
         link: 'https://asap.wigal.com.gh/login',
-        gif: null,
+        video: 'https://res.cloudinary.com/dg41c7v3d/video/upload/v1768907916/ASAP_jy9ydu.mov',
         logo: '/asap-logo.png'
     }
 ];
@@ -108,10 +109,23 @@ const Typewriter = ({ text, delay = 0.02, className, style }) => {
 
 const Hero = () => {
     const [activeTab, setActiveTab] = useState(products[0]);
+    const [isIVRModalOpen, setIsIVRModalOpen] = useState(false);
+
+    const openIVRModal = (e) => {
+        e.preventDefault();
+        setIsIVRModalOpen(true);
+    };
 
     return (
         <section className="hero-section">
             <div style={{ minHeight: '300px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <a href="/frog" onClick={openIVRModal} className="announcement-banner">
+                    <span className="announcement-badge">New</span>
+                    <span className="announcement-text">Introducing IVR Call Automation</span>
+                    <span className="announcement-link">
+                        <span>Learn more</span>
+                    </span>
+                </a>
                 <Typewriter
                     key={activeTab.id + "-title"}
                     text={activeTab.heroTitle}
@@ -185,7 +199,8 @@ const Hero = () => {
                     </motion.div>
                 </AnimatePresence>
             </div>
-        </section>
+            <IVRModal isOpen={isIVRModalOpen} onClose={() => setIsIVRModalOpen(false)} />
+        </section >
     );
 };
 

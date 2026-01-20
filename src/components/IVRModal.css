@@ -1,0 +1,165 @@
+.ivr-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+.ivr-modal-container {
+    background: white;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transform: scale(0.95);
+    opacity: 0;
+    animation: scaleIn 0.3s 0.1s forwards;
+    position: relative;
+    max-height: 90vh;
+}
+
+.ivr-modal-content {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    color: #1F2937;
+}
+
+.ivr-modal-logo {
+    height: 80px;
+    width: auto;
+    margin-bottom: 24px;
+    align-self: flex-start;
+}
+
+.ivr-modal-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0F172A;
+    margin-bottom: 16px;
+    line-height: 1.1;
+}
+
+.ivr-modal-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4B5563;
+    margin-bottom: 24px;
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+.ivr-modal-subtitle {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 12px;
+}
+
+.ivr-modal-button {
+    background-color: #16A34A;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 14px 28px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+.ivr-modal-button:hover {
+    background-color: #15803D;
+}
+
+.ivr-modal-image-col {
+    position: relative;
+    height: 100%;
+    min-height: 300px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ivr-modal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.ivr-modal-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    color: #1F2937;
+    z-index: 10;
+}
+
+.ivr-modal-close:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .ivr-modal-container {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        overflow-y: auto;
+    }
+
+    .ivr-modal-image-col {
+        height: 200px;
+        order: -1;
+    }
+
+    .ivr-modal-content {
+        padding: 24px;
+    }
+
+    .ivr-modal-title {
+        font-size: 2rem;
+    }
+}
