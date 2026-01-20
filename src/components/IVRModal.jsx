@@ -9,7 +9,7 @@ const IVRModal = ({ isOpen, onClose }) => {
         <div className="ivr-modal-overlay" onClick={onClose}>
             <div className="ivr-modal-container" onClick={e => e.stopPropagation()}>
                 <div className="ivr-modal-content">
-                    <img src="/frog-logo.svg" alt="FROG Logo" className="ivr-modal-logo" />
+                    <img src="/frog-logo.svg" alt="FROG Logo" className="ivr-modal-logo" loading="lazy" />
 
                     <h2 className="ivr-modal-title">Introducing IVR</h2>
 
@@ -36,7 +36,7 @@ const IVRModal = ({ isOpen, onClose }) => {
                     <button className="ivr-modal-close" onClick={onClose} aria-label="Close modal">
                         <X size={24} />
                     </button>
-                    <img src="/ivr-banner.jpg" alt="IVR Banner" className="ivr-modal-image" />
+                    <img src="/ivr-banner.jpg" alt="IVR Banner" className="ivr-modal-image" loading="lazy" />
                 </div>
             </div>
         </div>

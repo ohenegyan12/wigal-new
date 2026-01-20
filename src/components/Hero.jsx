@@ -145,7 +145,7 @@ const Hero = () => {
                     transition={{ duration: 0.3 }}
                     onClick={() => activeTab.link && window.open(activeTab.link, '_blank')}
                 >
-                    <img src="/logo-arrow.svg" alt="" className="button-icon" />
+                    <img src="/logo-arrow.svg" alt="" className="button-icon" loading="lazy" />
                     <Typewriter text={activeTab.buttonText} delay={0.02} style={{ display: 'inline-flex', marginLeft: '8px' }} />
                 </motion.button>
             </div>
@@ -164,7 +164,7 @@ const Hero = () => {
                             <p className="tab-description">{product.description}</p>
                         </div>
                         <div className="tab-content-mobile">
-                            <img src={product.logo} alt={product.title} className="tab-logo" />
+                            <img src={product.logo} alt={product.title} className="tab-logo" loading="lazy" />
                         </div>
                     </motion.div>
                 ))}
@@ -190,7 +190,7 @@ const Hero = () => {
                                 className="display-video"
                             />
                         ) : activeTab.gif ? (
-                            <img src={activeTab.gif} alt={activeTab.title} />
+                            <img src={activeTab.gif} alt={activeTab.title} loading="lazy" />
                         ) : (
                             <div className="placeholder-content">
                                 {activeTab.title} Preview
