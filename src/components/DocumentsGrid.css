@@ -1,0 +1,83 @@
+.documents-grid-section {
+    padding: 80px 20px;
+    background-color: #F9FAFB;
+    min-height: 400px;
+}
+
+.documents-grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.documents-section-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.documents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.document-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    cursor: pointer;
+}
+
+.document-card:hover {
+    transform: translateY(-4px);
+}
+
+.document-card-header {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+/* Specific header colors can be utility classes or inline styles, 
+   but for now we'll have a default or specific class for Redde */
+.document-card-header.redde {
+    background-color: #B91C1C;
+    /* Deep Red */
+}
+
+.document-card-logo {
+    max-width: 140px;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+.document-card-body {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.document-card-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.document-card-description {
+    font-size: 0.875rem;
+    color: #4B5563;
+    line-height: 1.6;
+}

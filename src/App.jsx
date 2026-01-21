@@ -9,6 +9,7 @@ import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
 import Security from './pages/Security';
+import Documents from './pages/Documents';
 import Chatbot from './components/Chatbot';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/security" element={<Security />} />
+        <Route path="/documents" element={<Documents />} />
       </Routes>
       <Chatbot />
     </Router>
