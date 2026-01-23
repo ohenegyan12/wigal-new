@@ -1,0 +1,94 @@
+.about-management {
+    padding: 80px 24px 120px;
+    background-color: #EBF8FE;
+    /* Light blue background based on mockup */
+}
+
+.management-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.management-title {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1A202C;
+    margin-bottom: 60px;
+}
+
+.management-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-content: center;
+}
+
+.manager-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.manager-image-border {
+    position: relative;
+    padding: 15px;
+    border: 2px dashed #728DC5;
+    /* Lighter blue dashed border */
+    border-radius: 40px;
+    display: inline-block;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.manager-image-wrapper {
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.manager-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.manager-name {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.manager-role {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    max-width: 200px;
+    line-height: 1.4;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .management-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+}
+
+@media (max-width: 640px) {
+    .management-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .manager-image-wrapper {
+        width: 180px;
+        height: 180px;
+    }
+}

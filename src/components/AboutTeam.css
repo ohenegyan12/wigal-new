@@ -1,0 +1,102 @@
+.about-team {
+    padding: 80px 24px 120px;
+    /* Reduced top padding as it usually follows management */
+    background-color: #F0F2FE;
+    /* Same light blue as management */
+}
+
+.team-container {
+    max-width: 1400px;
+    /* Slightly wider to fit 5 items */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.team-title {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1A202C;
+    margin-bottom: 60px;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.team-member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.member-image-border {
+    position: relative;
+    padding: 10px;
+    border: 2px dashed #728DC5;
+    /* Lighter blue dashed border */
+    border-radius: 40px;
+    display: inline-block;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.member-image-wrapper {
+    width: 240px;
+    height: 240px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.member-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.member-name {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 0.85rem;
+    color: #666;
+    max-width: 240px;
+    line-height: 1.3;
+}
+
+/* Responsiveness */
+@media (max-width: 1280px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .member-image-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+}

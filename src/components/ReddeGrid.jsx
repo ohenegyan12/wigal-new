@@ -41,7 +41,7 @@ const ReddeGrid = () => {
 
                 {/* Mint Card */}
                 <motion.div
-                    className="redde-card redde-card-mint"
+                    className="redde-card redde-card-black"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -49,7 +49,7 @@ const ReddeGrid = () => {
                 >
                     <h3 className="redde-card-title">Track Everything At Once</h3>
                     <p className="redde-card-desc">Instantly view and monitor your transactions with a clean, intuitive dashboard — check who paid, when, and where your funds are going.</p>
-                    <img src="/redde-illustration.svg" alt="Person celebrating" className="redde-illustration-mint" />
+                    <img src="/redde-illustration.svg" alt="Person celebrating" className="redde-illustration-black" />
                 </motion.div>
 
                 {/* Blue Card */}

@@ -70,13 +70,24 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (validate()) {
-            // Proceed with submission logic
-            console.log("Form Submitted", formData);
-            alert("Message Sent! (Simulation)");
+
+        // At least require full name and about business to be somewhat filled
+        if (formData.fullName || formData.aboutBusiness) {
+            const subject = encodeURIComponent(`Contact Form: ${formData.businessName || 'New Inquiry'}`);
+            const body = encodeURIComponent(
+                `Full Name: ${formData.fullName}\n` +
+                `Business Type: ${formData.businessType}\n` +
+                `Business Name: ${formData.businessName}\n` +
+                `Mobile Number: ${formData.mobileNumber}\n` +
+                `Email: ${formData.email}\n` +
+                `Location: ${formData.businessLocation}\n\n` +
+                `About Business:\n${formData.aboutBusiness}`
+            );
+
+            const mailtoUrl = `mailto:support@wigal.com.gh?subject=${subject}&body=${body}`;
+            window.location.href = mailtoUrl;
         } else {
-            console.log("Validation Failed");
-            // Errors state is already updated, inputs will re-render with red borders
+            validate(); // Trigger errors visually if they really didn't type anything
         }
     };
 
@@ -201,15 +212,10 @@ const Contact = () => {
                         <h4>Address</h4>
                         <p>Foster Washing Bay Junction, Off the Adentan-Ashiyie Road. VV 123, Valley View Oyibi</p>
                     </div>
-                    <div className="info-item">
-                        <h4>Email</h4>
-                        <p>info@wigal.com.gh</p>
-                        <p>support@wigal.com.gh</p>
-                    </div>
+
                     <div className="info-item">
                         <h4>Phone</h4>
-                        <p>+233552825758, +233553019529,</p>
-                        <p>+233552809558</p>
+                        <p>+233552825758</p>
                     </div>
                     <div className="info-item">
                         <h4>Working Hours</h4>

@@ -103,11 +103,10 @@
     color: white;
 }
 
-.redde-card-mint {
+.redde-card-black {
     grid-column: span 1;
-    background-color: #C0EAD1;
-    /* Mint Green */
-    color: #1A202C;
+    background-color: #000000;
+    color: white;
 }
 
 .redde-card-blue {
@@ -194,7 +193,7 @@
     transform: translate(0, 25%);
 }
 
-.redde-illustration-mint {
+.redde-illustration-black {
     position: absolute;
     bottom: -40px;
     left: 50%;
@@ -247,7 +246,7 @@
     /* Enforce height on cards that keep their images/layout */
     .redde-card-large,
     .redde-card-cream,
-    .redde-card-mint {
+    .redde-card-black {
         min-height: 450px;
     }
 

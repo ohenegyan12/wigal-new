@@ -1,15 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MessageCircle, X, Send, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Chatbot.css';
 
 const Chatbot = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [showCallout, setShowCallout] = useState(false);
     const [messages, setMessages] = useState([
         { id: 1, text: "Hi there! Looking to book a meeting or learn more about Wigal?", sender: 'bot' }
     ]);
     const [inputValue, setInputValue] = useState("");
     const [isTyping, setIsTyping] = useState(false);
+
+    // Show callout after a few seconds
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowCallout(true);
+        }, 3000);
+        return () => clearTimeout(timer);
+    }, []);
+
+    // Hide callout when chat opens
+    useEffect(() => {
+        if (isOpen) {
+            setShowCallout(false);
+        }
+    }, [isOpen]);
 
     const handleSendMessage = (e, text = null) => {
         if (e) e.preventDefault();
@@ -119,6 +135,29 @@ const Chatbot = () => {
                                 Wigal provides this chat. You agree this chat may be recorded.
                             </div>
                         </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            <AnimatePresence>
+                {showCallout && !isOpen && (
+                    <motion.div
+                        className="chatbot-callout"
+                        initial={{ opacity: 0, x: 20, scale: 0.9 }}
+                        animate={{ opacity: 1, x: 0, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.9 }}
+                        onClick={() => setIsOpen(true)}
+                    >
+                        <span className="callout-text">Need answers or help? 👋</span>
+                        <button
+                            className="callout-close"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                setShowCallout(false);
+                            }}
+                        >
+                            <X size={14} />
+                        </button>
                     </motion.div>
                 )}
             </AnimatePresence>

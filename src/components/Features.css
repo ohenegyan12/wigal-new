@@ -118,6 +118,16 @@
     transition: transform 0.5s ease;
 }
 
+.feature-card.cyan .feature-card-image {
+    transform: translateY(15px);
+    height: 95%;
+    /* Slightly smaller to prevent top clipping */
+}
+
+.feature-card.cyan:hover .feature-card-image {
+    transform: translateY(15px) scale(1.02);
+}
+
 .feature-card:hover .feature-card-image {
     transform: scale(1.05);
 }
