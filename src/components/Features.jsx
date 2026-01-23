@@ -9,28 +9,28 @@ const featureData = [
         title: "Connect & Communicate",
         description: "Send SMS, Voice & Email instantly, reach your audience on any device, any network.",
         colorClass: "green",
-        image: "/card-1.png"
+        image: "/card-1.webp"
     },
     {
         id: 2,
         title: "Interactive USSD",
         description: "Build mobile menus and real-time services that work on all phones, no app needed.",
         colorClass: "cyan",
-        image: "/card-2.png"
+        image: "/card-2.webp"
     },
     {
         id: 3,
         title: "Accept Payments",
         description: "Collect mobile money and card payments securely, with real-time tracking.",
         colorClass: "red",
-        image: "/card-3.png"
+        image: "/card-3.webp"
     },
     {
         id: 4,
         title: "Bulk Payouts",
         description: "Disburse funds to many recipients quickly and easily for payroll or payouts.",
         colorClass: "blue",
-        image: "/card-4.png"
+        image: "/card-4.webp"
     }
 ];
 

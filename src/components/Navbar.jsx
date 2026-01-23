@@ -94,7 +94,7 @@ const Navbar = () => {
             ]
         },
         {
-            title: "Redde Online",
+            title: "Redde Payment",
             items: [
                 { label: "BENEFITS", link: "/redde#redde-benefits" },
                 { label: "WHY REDDE", link: "/redde#redde-features" },
