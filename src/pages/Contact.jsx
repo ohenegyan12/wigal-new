@@ -130,7 +130,13 @@ const Contact = () => {
                                 />
                             </div>
                             <div className="form-group">
-                                <label className="form-label">Business Type <span className="required-star">*</span> <Info size={14} color="#A0AEC0" style={{ display: 'inline', marginLeft: 4 }} /></label>
+                                <label className="form-label">
+                                    Business Type <span className="required-star">*</span>
+                                    <span className="tooltip-container">
+                                        <Info size={14} color="#A0AEC0" style={{ display: 'inline', marginLeft: 4, cursor: 'help' }} />
+                                        <span className="tooltip-text">Select the legal structure that best describes your business entity (e.g., Sole Proprietorship, LLC).</span>
+                                    </span>
+                                </label>
                                 <select
                                     name="businessType"
                                     className={`form-select ${errors.businessType ? 'error' : ''}`}

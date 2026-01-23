@@ -88,7 +88,7 @@ const Navbar = () => {
             title: "FROG Messaging",
             items: [
                 { label: "FROG SERVICES", link: "/frog#frog-services" },
-                { label: "IVR", link: "/frog#ivr" },
+                { label: "IVR and Voice", link: "/frog#ivr" },
                 { label: "PRICING", link: "/frog#pricing" },
                 { label: "DEVELOPERS", link: "/frog#developers" }
             ]

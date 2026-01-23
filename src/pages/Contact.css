@@ -1,15 +1,16 @@
 .contact-page {
     display: flex;
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
     background-color: white;
     font-family: 'Proxima Nova', sans-serif;
+    overflow: hidden;
 }
 
 /* Left Section - Image */
 .contact-image-section {
     flex: 1;
-    background-image: url('/female-shopkeeper-smiling-camera.png');
+    background-image: url('/2148789681.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -187,6 +188,9 @@
 @media (max-width: 1024px) {
     .contact-page {
         flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
     }
 
     .contact-image-section {
@@ -217,4 +221,53 @@
 .form-textarea.error {
     border-color: #E53E3E;
     /* Red color for error */
+}
+
+/* Tooltip Styles */
+.tooltip-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 220px;
+    background-color: #2D3748;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 100;
+    bottom: 135%;
+    /* Position above */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center it relative to parent */
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.4;
+    pointer-events: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Arrow for tooltip */
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #2D3748 transparent transparent transparent;
 }
