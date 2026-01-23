@@ -358,8 +358,8 @@
 
     /* Active State for Mobile: White rectangle fill */
     .tab-item.active {
-        background: white;
-        backdrop-filter: none;
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(5px);
     }
 
     /* Ensure no hover lift on mobile to avoid weird jumpiness */
